@@ -6,7 +6,7 @@ pipeline{
           echo "building an application..."
           sh 'sudo apt-get install apache2 -y'
           sh 'sudo systemctl apache2 start'
-          sh 'sudo systemctl apache2 enable
+          sh 'sudo systemctl apache2 enable'
         }
       }
       stage("test"){
