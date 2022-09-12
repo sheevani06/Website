@@ -9,5 +9,11 @@ pipeline{
           sudo systemctl apache2 enable
         }
       }
+      stage("test"){
+        steps{
+          echo "testing an application..."
+         
+        }
+      }
     }
 }
