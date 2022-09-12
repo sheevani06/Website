@@ -4,9 +4,9 @@ pipeline{
       stage("build"){
         steps{
           echo "building an application..."
-          apt-get apache2 install
-          systemctl apache2 start
-          systemctl apache2 enable
+          apt-get apache install
+          systemctl apache start
+          systemctl apache enable
         }
       }
       stage("test"){
