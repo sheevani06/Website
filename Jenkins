@@ -4,7 +4,7 @@ pipeline{
       stage("build"){
         steps{
           echo "building an application..."
-          sudo apt-get apache install
+          sudo apt-get install apache2 -y
         }
       }
       stage("test"){
