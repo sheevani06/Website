@@ -15,5 +15,16 @@ pipeline{
          
         }
       }
+      
+      stage("Deploy"){
+        steps{
+          echo "deploying an application..."
+          sh 'sudo mv /var/lib/jenkins/workspace/demo /var/www/demo'
+          sh 'sudo service apache2 start'
+          sh 'sudo service apache2 status'
+          echo "Deployed Successfully"
+         
+        }
+      }
     }
 }
