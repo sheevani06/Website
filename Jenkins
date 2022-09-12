@@ -5,16 +5,8 @@ pipeline{
         steps{
           echo "building an application..."
           sudo apt-get apache2 install
-        }
-      }
-      stage("test"){
-        steps{
-          echo "testing an application..."
-        }
-      }
-      stage("deploy"){
-        steps{
-          echo "deploying an application..."
+          sudo systemctl apache2 start
+          sudo systemctl apache2 enable
         }
       }
     }
