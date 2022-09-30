@@ -3,7 +3,6 @@ pipeline{
     stages{
       stage("build"){
         steps{
-          sh 'sudo cp -r /var/www/demo /var/lib/jenkins/workspace/demo'
           echo "building an application..."
           sh 'sudo apt-get install apache2 -y'
           sh 'sudo service apache2 start'
@@ -20,8 +19,6 @@ pipeline{
       stage("Deploy"){
         steps{
           echo "deploying an application..."
-          sh 'sudo mv /var/www/html/index.html /var/www/html/old_index.html'
-          sh 'sudo cp /var/www/demo/index.html /var/www/html/index.html'
           sh 'sudo service apache2 start'
           sh 'sudo service apache2 status'
           echo "Deployed Successfully"
