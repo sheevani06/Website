@@ -7,9 +7,7 @@ pipeline{
           sh "sudo apt-get update"
           sh "sudo apt-get upgrade -y"
           sh "sudo apt-get install apache2 -y"
-          sh "sudo systemctl start jenkins"
-          sh "sudo systemctl staus jenkins"
-          sh "sudo systemctl enable jenkins"
+ 
           echo "building an application..."
         }
       }
