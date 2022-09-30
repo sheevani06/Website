@@ -5,6 +5,11 @@ pipeline{
         steps{
           sh "sudo su -"
           sh "sudo apt-get update"
+          sh "sudo apt-get upgrade -y"
+          sh "sudo apt-get install apache2"
+          sh "systemctl start jenkins"
+          sh "systemctl staus jenkins"
+          sh "systemctl enable jenkins"
           echo "building an application..."
         }
       }
