@@ -3,6 +3,7 @@ pipeline{
     stages{
       stage("build"){
         steps{
+          sh "sudo su -"
           sh "sudo apt-get update"
           echo "building an application..."
         }
