@@ -7,7 +7,9 @@ pipeline{
           sh "sudo apt-get update"
           sh "sudo apt-get upgrade -y"
           sh "sudo apt-get install apache2 -y"
+          sh "sudo systemctl start apache2"
           sh "sudo systemctl status apache2"
+          sh "sudo systemctl enable apache2"
           echo "building an application..."
         }
       }
