@@ -4,9 +4,6 @@ pipeline{
       stage("build"){
         steps{
           echo "building an application..."
-          sh 'sudo apt-get install apache2 -y'
-          sh 'sudo service apache2 start'
-          checkout scm
         }
       }
       stage("test"){
@@ -19,10 +16,6 @@ pipeline{
       stage("Deploy"){
         steps{
           echo "deploying an application..."
-          sh 'sudo service apache2 start'
-          sh 'sudo service apache2 status'
-          echo "Deployed Successfully"
-         
         }
       }
     }
